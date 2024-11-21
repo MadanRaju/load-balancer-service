@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    loadbalancer:
+      enabled: true
+      health-check:
+        path:
+          default: /actuator/health
+        interval: 10
+      ribbon:
+        enabled: false
+      instances:
+        hello-service:
+          - uri: http://localhost:8080
+          - uri: http://localhost:8082
+  application:
+    name: load-balancer-service
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+logging:
+  level:
+    org.springframework.cloud.loadbalancer: DEBUG
+
+feign:
+  circuitbreaker:
+    enabled: true

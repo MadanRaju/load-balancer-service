@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.assignment.loadbalancer.LoadbalancerApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.969 s -- in com.assignment.loadbalancer.LoadbalancerApplicationTests
